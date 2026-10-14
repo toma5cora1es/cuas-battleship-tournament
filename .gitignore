@@ -1,0 +1,5 @@
+*.asv
+*.mex*
+.DS_Store
+Thumbs.db
+replays/sandbox_replay.html
