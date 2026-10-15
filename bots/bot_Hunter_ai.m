@@ -1,7 +1,7 @@
 function output = bot_Hunter_ai(mode, board_view)
 % BOT_HUNTER_AI Benchmark AI using Checkerboard Parity + Target Adjacency.
 
-    if mode == "setup"
+    if strcmp(mode, 'setup')
         fleet = [5, 4, 3, 3, 2];
         board = zeros(10, 10);
         for id = 1:length(fleet)
@@ -22,7 +22,7 @@ function output = bot_Hunter_ai(mode, board_view)
         end
         output = board;
 
-    elseif mode == "shoot"
+    elseif strcmp(mode, 'shoot')
         [hit_r, hit_c] = find(board_view == 1);
         if ~isempty(hit_r)
             dirs = [-1, 0; 1, 0; 0, -1; 0, 1];
